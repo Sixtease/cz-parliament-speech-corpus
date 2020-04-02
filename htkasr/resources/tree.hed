@@ -1,0 +1,165 @@
+QS  "R_Slabikotvorna"           { *+a, *+aa, *+e, *+ee, *+i, *+ii, *+o, *+u, *+uu, *+aw, *+ow, *+r, *+l }
+QS  "R_Vokalni"                 { *+a, *+aa, *+e, *+ee, *+i, *+ii, *+o, *+u, *+uu, *+aw, *+ow, *+l, *+m, *+n, *+ng, *+nj, *+r }
+QS  "R_Kontinualni"             { *+a, *+aa, *+e, *+ee, *+i, *+ii, *+o, *+u, *+uu, *+aw, *+ow, *+f, *+h, *+j, *+l, *+m, *+nj, *+r, *+rsh, *+rzh, *+s, *+sh, *+v, *+z, *+zh }
+
+QS  "R_Samohlaska"              { *+a, *+aa, *+e, *+ee, *+i, *+ii, *+o, *+u, *+uu, *+aw, *+ow }
+QS  "R_KratkaSamoh"             { *+a, *+e, *+i, *+o, *+u }
+QS  "R_DlouhaSamoh"             { *+aa, *+ee, *+ii, *+uu }
+QS  "R_Dvojhlaska"              { *+aw, *+ow }
+QS  "R_StredovaSamoh"           { *+e, *+ee, *+o, *+ow }
+QS  "R_VysokaSamoh"             { *+i, *+ii, *+u, *+uu }
+QS  "R_PredniSamoh"             { *+i, *+ii, *+e, *+ee }
+QS  "R_ZadniSamoh"              { *+o, *+u, *+uu, *+ow }
+QS  "R_NeokrouhleSamoh"         { *+a, *+aa, *+e, *+ee, *+i, *+ii, *+aw }
+
+QS  "R_Souhlaska"               { *+b, *+c, *+ch, *+d, *+dj, *+f, *+g, *+h, *+x, *+k, *+l, *+m, *+n, *+ng, *+nj, *+p, *+r, *+rsh, *+rzh, *+s, *+sh, *+t, *+tj, *+v, *+z, *+zh }
+QS  "R_Znela"                   { *+b, *+d, *+dj, *+g, *+h, *+rzh, *+sh, *+v, *+z, *+zh }
+QS  "R_Neznela"                 { *+c, *+ch, *+f, *+x, *+k, *+p, *+rsh, *+s, *+sh, *+t, *+tj }
+QS  "R_Jedinecna"               { *+l, *+m, *+n, *+ng, *+nj, *+r }
+QS  "R_Okluziva"                { *+p, *+b, *+t, *+d, *+tj, *+dj, *+k, *+g }
+QS  "R_Nazal"                   { *+m, *+n, *+ng, *+nj }
+QS  "R_Konstriktiva"            { *+f, *+v, *+s, *+z, *+sh, *+zh, *+x, *+h }
+QS  "R_Semiokluziva"            { *+c, *+ch }
+QS  "R_Vibranta"                { *+r, *+rsh, *+rzh }
+QS  "R_Aproximanta"             { *+j, *+l }
+QS  "R_Obouretna"               { *+b, *+m, *+p }
+QS  "R_Retozubna"               { *+f, *+v }
+QS  "R_Predodasnova"            { *+n, *+t, *+d, *+c, *+s, *+z, *+r, *+rsh, *+rzh, *+l }
+QS  "R_Zadodasnova"             { *+ch, *+sh, *+zh }
+QS  "R_Predopatrova"            { *+dj, *+nj, *+tj, *+j }
+QS  "R_Zadopatrova"             { *+k, *+g, *+x, *+ng }
+QS  "R_Drsna"                   { *+f, *+v, *+s, *+z, *+sh, *+zh, *+x, *+h, *+c, *+ch }
+QS  "R_Tupa"                    { *+b, *+m, *+p, *+f, *+v, *+k, *+g, *+x, *+ng, *+h }
+
+QS  "R_Zdvojena"                { a+a, *-a+a, aa+a, *-aa+a, a+aw, *-a+aw, d+d, *-d+d, e+e, *-e+e, e+ee, *-e+ee, i+i, *-i+i, i+ii, *-i+ii, ii+i, *-ii+i, j+j, *-j+j, k+k, *-k+k, ng+n, *-ng+n, o+o, *-o+o, o+ow, *-o+ow, p+p, *-p+p, s+s, *-s+s, sh+sh, *-sh+sh, t+t, *-t+t, u+u, *-u+u, u+uu, *-u+uu, z+z, *-z+z }
+
+QS  "R_aaa"                     { *+a, *+aa, *+aw }
+QS  "R_eee"                     { *+e, *+ee }
+QS  "R_iii"                     { *+i, *+ii }
+QS  "R_nnn"                     { *+n, *+ng }
+QS  "R_ooo"                     { *+o, *+ow }
+QS  "R_rszh"                    { *+rsh, *+rzh }
+QS  "R_ttt"                     { *+c, *+ch, *+t }
+QS  "R_uuu"                     { *+u, *+uu }
+
+QS  "R_a"                       { *+a }
+QS  "R_aa"                      { *+aa }
+QS  "R_aw"                      { *+aw }
+QS  "R_b"                       { *+b }
+QS  "R_c"                       { *+c }
+QS  "R_ch"                      { *+ch }
+QS  "R_d"                       { *+d }
+QS  "R_dj"                      { *+dj }
+QS  "R_e"                       { *+e }
+QS  "R_ee"                      { *+ee }
+QS  "R_f"                       { *+f }
+QS  "R_g"                       { *+g }
+QS  "R_h"                       { *+h }
+QS  "R_x"                       { *+x }
+QS  "R_i"                       { *+i }
+QS  "R_ii"                      { *+ii }
+QS  "R_j"                       { *+j }
+QS  "R_k"                       { *+k }
+QS  "R_l"                       { *+l }
+QS  "R_m"                       { *+m }
+QS  "R_n"                       { *+n }
+QS  "R_ng"                      { *+ng }
+QS  "R_nj"                      { *+nj }
+QS  "R_o"                       { *+o }
+QS  "R_ow"                      { *+ow }
+QS  "R_p"                       { *+p }
+QS  "R_r"                       { *+r }
+QS  "R_rsh"                     { *+rsh }
+QS  "R_rzh"                     { *+rzh }
+QS  "R_s"                       { *+s }
+QS  "R_sh"                      { *+sh }
+QS  "R_t"                       { *+t }
+QS  "R_tj"                      { *+tj }
+QS  "R_u"                       { *+u }
+QS  "R_uu"                      { *+uu }
+QS  "R_v"                       { *+v }
+QS  "R_z"                       { *+z }
+QS  "R_zh"                      { *+zh }
+
+QS  "L_Slabikotvorna"           { a-*, aa-*, e-*, ee-*, i-*, ii-*, o-*, u-*, uu-*, aw-*, ow-*, r-*, l-* }
+QS  "L_Vokalni"                 { a-*, aa-*, e-*, ee-*, i-*, ii-*, o-*, u-*, uu-*, aw-*, ow-*, l-*, m-*, n-*, ng-*, nj-*, r-* }
+QS  "L_Kontinualni"             { a-*, aa-*, e-*, ee-*, i-*, ii-*, o-*, u-*, uu-*, aw-*, ow-*, f-*, h-*, j-*, l-*, m-*, nj-*, r-*, rsh-*, rzh-*, s-*, sh-*, v-*, z-*, zh-* }
+
+QS  "L_Samohlaska"              { a-*, aa-*, e-*, ee-*, i-*, ii-*, o-*, u-*, uu-*, aw-*, ow-* }
+QS  "L_KratkaSamoh"             { a-*, e-*, i-*, o-*, u-* }
+QS  "L_DlouhaSamoh"             { aa-*, ee-*, ii-*, uu-* }
+QS  "L_Dvojhlaska"              { aw-*, ow-* }
+QS  "L_StredovaSamoh"           { e-*, ee-*, o-* }
+QS  "L_VysokaSamoh"             { i-*, ii-*, u-*, uu-*, aw-*, ow-* }
+QS  "L_PredniSamoh"             { i-*, ii-*, e-*, ee-* }
+QS  "L_ZadniSamoh"              { o-*, u-*, uu-*, aw-*, ow-* }
+QS  "L_NeokrouhleSamoh"         { a-*, aa-*, e-*, ee-*, i-*, ii-* }
+
+QS  "L_Souhlaska"               { b-*, c-*, ch-*, d-*, dj-*, f-*, g-*, h-*, x-*, k-*, l-*, m-*, n-*, ng-*, nj-*, p-*, r-*, rsh-*, rzh-*, s-*, sh-*, t-*, tj-*, v-*, z-*, zh-* }
+QS  "L_Znela"                   { b-*, d-*, dj-*, g-*, h-*, rzh-*, sh-*, v-*, z-*, zh-* }
+QS  "L_Neznela"                 { c-*, ch-*, f-*, x-*, k-*, p-*, rsh-*, s-*, sh-*, t-*, tj-* }
+QS  "L_Jedinecna"               { l-*, m-*, n-*, ng-*, nj-*, r-* }
+QS  "L_Okluziva"                { p-*, b-*, t-*, d-*, tj-*, dj-*, k-*, g-* }
+QS  "L_Nazal"                   { m-*, n-*, ng-*, nj-* }
+QS  "L_Konstriktiva"            { f-*, v-*, s-*, z-*, sh-*, zh-*, x-*, h-* }
+QS  "L_Semiokluziva"            { c-*, ch-* }
+QS  "L_Vibranta"                { r-*, rsh-*, rzh-* }
+QS  "L_Aproximanta"             { j-*, l-*, aw-*, ow-* }
+QS  "L_Obouretna"               { b-*, m-*, p-* }
+QS  "L_Retozubna"               { f-*, v-* }
+QS  "L_Predodasnova"            { n-*, t-*, d-*, c-*, s-*, z-*, r-*, rsh-*, rzh-*, l-* }
+QS  "L_Zadodasnova"             { ch-*, sh-*, zh-* }
+QS  "L_Predopatrova"            { dj-*, nj-*, tj-*, j-* }
+QS  "L_Zadopatrova"             { k-*, g-*, x-*, ng-* }
+QS  "L_Drsna"                   { f-*, v-*, s-*, z-*, sh-*, zh-*, x-*, h-*, c-*, ch-* }
+QS  "L_Tupa"                    { b-*, m-*, p-*, f-*, v-*, k-*, g-*, x-*, ng-*, h-* }
+
+QS  "L_Zdvojena"                { a-a, a-a+*, aa-a, aa-a+*, a-aw, a-aw+*, d-d, d-d+*, e-e, e-e+*, e-ee, e-ee+*, i-i, i-i+*, i-ii, i-ii+*, ii-i, ii-i+*, j-j, j-j+*, k-k, k-k+*, ng-n, ng-n+*, o-o, o-o+*, o-ow, o-ow+*, p-p, p-p+*, s-s, s-s+*, sh-sh, sh-sh+*, t-t, t-t+*, u-u, u-u+*, u-uu, u-uu+*, z-z, z-z+* }
+
+QS  "L_aaa"                     { a-*, aa-* }
+QS  "L_eee"                     { e-*, ee-* }
+QS  "L_iii"                     { i-*, ii-* }
+QS  "L_nnn"                     { n-*, ng-* }
+QS  "L_sss"                     { s-*, c-* }
+QS  "L_shsh"                    { sh-*, ch-* }
+QS  "L_rszh"                    { rsh-*, rzh-* }
+QS  "L_uuu"                     { u-*, uu-*, aw-*, ow-* }
+
+QS  "L_a"                       { a-* }
+QS  "L_aa"                      { aa-* }
+QS  "L_aw"                      { aw-* }
+QS  "L_b"                       { b-* }
+QS  "L_c"                       { c-* }
+QS  "L_ch"                      { ch-* }
+QS  "L_d"                       { d-* }
+QS  "L_dj"                      { dj-* }
+QS  "L_e"                       { e-* }
+QS  "L_ee"                      { ee-* }
+QS  "L_f"                       { f-* }
+QS  "L_g"                       { g-* }
+QS  "L_h"                       { h-* }
+QS  "L_x"                       { x-* }
+QS  "L_i"                       { i-* }
+QS  "L_ii"                      { ii-* }
+QS  "L_j"                       { j-* }
+QS  "L_k"                       { k-* }
+QS  "L_l"                       { l-* }
+QS  "L_m"                       { m-* }
+QS  "L_n"                       { n-* }
+QS  "L_ng"                      { ng-* }
+QS  "L_nj"                      { nj-* }
+QS  "L_o"                       { o-* }
+QS  "L_ow"                      { ow-* }
+QS  "L_p"                       { p-* }
+QS  "L_r"                       { r-* }
+QS  "L_rsh"                     { rsh-* }
+QS  "L_rzh"                     { rzh-* }
+QS  "L_s"                       { s-* }
+QS  "L_sh"                      { sh-* }
+QS  "L_t"                       { t-* }
+QS  "L_tj"                      { tj-* }
+QS  "L_u"                       { u-* }
+QS  "L_uu"                      { uu-* }
+QS  "L_v"                       { v-* }
+QS  "L_z"                       { z-* }
+QS  "L_zh"                      { zh-* }

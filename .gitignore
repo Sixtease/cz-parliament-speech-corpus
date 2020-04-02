@@ -1,0 +1,7 @@
+data/*/*
+downloads/*.json
+downloads/audio/*.mp3
+htkasr/data/*/*
+htkasr/downloads/lindat
+htkasr/hmms/*
+logs/*/*

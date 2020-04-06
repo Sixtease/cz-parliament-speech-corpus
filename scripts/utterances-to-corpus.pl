@@ -15,7 +15,7 @@ while (<>) {
         y/Ł/L/;
         y/Ń/N/;
         y/Ć/Č/;
-        s/[^AÁBCČDĎEÉĚFGHIÍJKLMNŇOÓPQRŘSŠTŤUÚŮVWXYÝZŽ ]+//g;
+        s/[^AÁBCČDĎEÉĚFGHIÍJKLMNŇOÓPQRŘSŠTŤUÚŮVWXYÝZŽ ]+/ /g;
         s/\s{2,}/ /g;
         s/^\s+//;
         s/\s+$//;

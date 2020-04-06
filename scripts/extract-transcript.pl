@@ -19,8 +19,7 @@ while (<>) {
     (my $txtbn = $mp3bn) =~ s/mp3/txt/;
     warn "$mp3bn\n";
     open my $outfh, '>', "$outdir/$txtbn" or die;
-    for (map { split /\s+/ } @$stenoarr) {
-        s/\W//g;
+    for (map { split /\W+/ } @$stenoarr) {
         say {$outfh} encode_utf8(lc) if /\w/;
     }
 }

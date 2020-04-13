@@ -55,8 +55,9 @@ run the initial transcription.
 ### models for initial transcription
 
 To get the initial transcript, you need julius and an acoustic and a language
-model. You can either download the [model package](TODO) and extract it here or
-you can build it yourself with HTK.
+model. You can either download the
+[model package](https://uloz.to/file/lD4AP9DDEDgI/cz-parliament-speech-corpus-resources-zip)
+and extract it here or you can build it yourself with HTK.
 
 ### Other dependencies
 

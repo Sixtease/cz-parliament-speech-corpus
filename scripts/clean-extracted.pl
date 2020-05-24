@@ -17,14 +17,14 @@ my $prev_line;
 my $orig_line;
 LINE:
 while (<>) {
-    s/č\./číslo/ig;
-    s/resp\./respektive /ig;
-    s/atd./a tak dále /ig;
-    s/hod\./hodin /ig;
-    s/tzn\./to znamená /ig;
-    s/sb\./sbírky /ig;
-    s/apod\./a podobně/ig;
-    s/kč\./korun/ig;
+    s/\bč\./číslo/ig;
+    s/\bresp\./respektive /ig;
+    s/\batd./a tak dále /ig;
+    s/\bhod\./hodin /ig;
+    s/\btzn\./to znamená /ig;
+    s/\bsb\./sbírky /ig;
+    s/\bapod\./a podobně/ig;
+    s/\bkč\./korun/ig;
     s{/}{ lomeno }g;
 
     if (s/.*§//) {
@@ -82,21 +82,26 @@ while (<>) {
             print_alternatives(num2cs_ordinal($1));
             next WORD;
         }
-        if (/(\d+)/) {
-            my $num = $1;
+        if (/\d+/) {
+            (my $num = $head) =~ s/\D+$//;
             if ($prev_line =~ /číslo/) {
                 my @genderarg = $num == 1 ? (gender => 'f') : ();
                 print_alternatives(num2cs_cardinal(
                     @genderarg, case => 'nominative', $num,
                 ));
             }
-            elsif ($prev_line =~ /přítomno|\bpro(?:ti)?\b/) {
+            elsif ($prev_line =~ /\bpřítome?n|\bpro(?:ti)?\b/) {
                 print_alternatives(
                     num2cs_cardinal(
                         gender => 'g', case => 'nominative', $num,
                     ),
                     ($num == 1 ? 'jeden' : ()),
                 );
+            }
+            elsif ($prev_line =~ /\bro[kc]/) {
+                print_alternatives(num2cs_cardinal(
+                    gender => 'g', case => 'nominative', skip_leading_one => 1, $num,
+                ));
             }
             else {
                 print_alternatives(num2cs_cardinal($num));

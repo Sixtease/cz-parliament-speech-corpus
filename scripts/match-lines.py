@@ -1,13 +1,46 @@
 #!/usr/bin/env python
 
 from sys import argv
-from Levenshtein import editops
+from Levenshtein import distance, editops
 
 fh1 = open(argv[1])
 fh2 = open(argv[2])
+fh_disambiguated = open(argv[3], 'w')
 
 str1 = fh1.read()
 str2 = fh2.read()
+
+def resolve_single_variation(alternating, refstr):
+  splitd = alternating.split('#BEGIN_ALTERNATIVES\n', maxsplit = 1)
+  if len(splitd) < 2:
+    print
+    return False
+  (head, rest) = (splitd[0], splitd[1])
+  splitd = rest.split('#END_ALTERNATIVES\n', maxsplit = 1)
+  if len(splitd) != 2:
+    raise Error('no matching alternatives')
+  (altstr, tail) = (splitd[0], splitd[1])
+  alternatives = altstr.split('#\n')
+  #print('### head:'); print(head); print('### alternatives:'); print(alternatives); print('### tail:'); print(tail)
+  minimum_distance = float('inf')
+  best_alternative = None
+  for alternative in alternatives:
+    candidate = head + alternative + tail
+    ld = distance(candidate, refstr)
+    if ld < minimum_distance:
+      best_alternative = candidate
+      minimum_distance = ld
+  return best_alternative
+
+def resolve_variations(alternating, refstr):
+  while True:
+    resolved = resolve_single_variation(alternating, refstr)
+    if resolved == False:
+      return alternating
+    alternating = resolved
+
+str2 = resolve_variations(str2, str1)
+fh_disambiguated.write(str2)
 
 eops = editops(str1, str2)
 

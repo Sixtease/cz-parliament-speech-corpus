@@ -25,6 +25,7 @@ while (<>) {
     s/\bsb\./sbírky /ig;
     s/\bapod\./a podobně/ig;
     s/\bkč\./korun/ig;
+    s/\bcca\.?/cirka/ig;
     s{/}{ lomeno }g;
 
     if (s/.*§//) {

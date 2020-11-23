@@ -29,8 +29,8 @@ lmplz \
   < data/lm/corpusb.latin2 \
   > data/lm/tgb.kenlmorder.arpa
 
-perl scripts/julutil.pl sort_lm < data/lm/tg.kenlmorder.arpa  > 'data/lm/tg.arpa'
-perl scripts/julutil.pl sort_lm < data/lm/tgb.kenlmorder.arpa > 'data/lm/tgb.arpa'
+perl scripts/julutil.pl sort_lm < data/lm/tg.kenlmorder.arpa  > data/lm/tg.arpa
+perl scripts/julutil.pl sort_lm < data/lm/tgb.kenlmorder.arpa > data/lm/tgb.arpa
 
 bash scripts/mkphondict.sh < data/dictionary/test.dict \
   | head -n 65000 > data/dictionary/test.phon.dict

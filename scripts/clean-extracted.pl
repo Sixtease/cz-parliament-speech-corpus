@@ -72,27 +72,28 @@ while (<>) {
         next WORD if not defined $_;
         next WORD if /hodin/ and $prev_line =~ /#\d/;
         if (/#\d+:\d+/) {
-            print_alternatives(num2cs_time($_));
+            print_alternatives($_, num2cs_time($_));
             next WORD;
         }
         elsif (/\d#\S+/) {
-            print_alternatives(num2cs_date($_));
+            print_alternatives($_, num2cs_date($_));
             next WORD;
         }
         if (/(\d+)\./) {
-            print_alternatives(num2cs_ordinal($1));
+            print_alternatives($_, num2cs_ordinal($1));
             next WORD;
         }
         if (/\d+/) {
             (my $num = $head) =~ s/\D+$//;
             if ($prev_line =~ /číslo/) {
                 my @genderarg = $num == 1 ? (gender => 'f') : ();
-                print_alternatives(num2cs_cardinal(
+                print_alternatives($num, num2cs_cardinal(
                     @genderarg, case => 'nominative', $num,
                 ));
             }
             elsif ($prev_line =~ /\bpřítome?n|\bpro(?:ti)?\b/) {
                 print_alternatives(
+                    $num,
                     num2cs_cardinal(
                         gender => 'g', case => 'nominative', $num,
                     ),
@@ -100,12 +101,12 @@ while (<>) {
                 );
             }
             elsif ($prev_line =~ /\bro[kc]/) {
-                print_alternatives(num2cs_cardinal(
+                print_alternatives($num, num2cs_cardinal(
                     gender => 'g', case => 'nominative', skip_leading_one => 1, $num,
                 ));
             }
             else {
-                print_alternatives(num2cs_cardinal($num));
+                print_alternatives($num, num2cs_cardinal($num));
             }
             next WORD;
         }

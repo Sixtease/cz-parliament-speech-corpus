@@ -34,11 +34,10 @@ tab-separated fields:
 
 1. start position (in seconds),
 2. end position,
-3. predicted trailing silence length,
-4. predicted word,
-5. manual word,
-6. line in manual transcript,
-7. alignment certainty.
+3. predicted word,
+4. manual word,
+5. line in manual transcript,
+6. alignment certainty.
 
 The alignment between the two transcripts is done by computing Levenshtein
 edit operations. The alignment certainty is then the number of edits on the

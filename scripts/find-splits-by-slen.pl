@@ -16,7 +16,8 @@ my @sils;
 SUB:
 while (<>) {
     chomp;
-    my ($start, $end, $slen, $predword, $goldword, $goldlineno, $score) = split /\t/;
+    my ($start, $end, $predword, $goldword, $goldlineno, $score) = split /\t/;
+    my $slen = $end - $start;
     $file_end = $end;
     next SUB if $slen <= 0;
 
